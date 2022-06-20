@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="background: black; color: white; margin-top: 50px">
+    <script type="text/javascript" async=1>
+        var spPath = '/sp.js';
+        ; (function (p, l, o, w, i, n, g) { if (!p[i]) { p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || []; p.GlobalSnowplowNamespace.push(i); p[i] = function () { (p[i].q = p[i].q || []).push(arguments) }; p[i].q = p[i].q || []; n = l.createElement(o); g = l.getElementsByTagName(o)[0]; n.async = 1; n.src = w; g.parentNode.insertBefore(n, g) } }(window, document, "script", spPath, "snowplow"));
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            window.snowplow('newTracker', 'sp-js', snowplowEndpoint, {
+                appId: 'sp-js',
+                discoverRootDomain: true,
+                cookieSameSite: 'Lax',
+                contexts: {
+                    webPage: true,
+                    session: true
+                }
+            });
+            window.snowplow('trackPageView');
+        });
+    </script>
+    <h1>This is a static HTML source!</h1>
+</body>
+
+</html>
