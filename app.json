@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "snowplow-hybrid-app",
+    "slug": "snowplow-hybrid-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "snowplow-hybrid-app"
+}
